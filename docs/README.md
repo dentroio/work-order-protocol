@@ -22,4 +22,4 @@ Evangelism:
 
 - [Blog Plan](evangelism/blog-plan.md)
 - [Tickets Are Not Enough For Coding Agents](evangelism/tickets-are-not-enough.md)
-
+- [Blog Series](blog/README.md)

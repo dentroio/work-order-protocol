@@ -153,3 +153,5 @@ The Work Order Protocol is the method. A factory is one implementation path.
 
 The [evangelism guide](docs/evangelism/blog-plan.md) includes blog themes,
 audiences, titles, and a first-post draft for explaining Work Orders publicly.
+The polished [blog series](docs/blog/README.md) starts with the protocol,
+continues into a Clarion case study, and then explains the optional factory path.
