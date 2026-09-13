@@ -1,12 +1,14 @@
 # Work Order Protocol
 
-A lightweight protocol for turning software intent into verified implementation
-by humans, coding agents, or automation.
+A lightweight protocol for turning software intent into verified implementation.
 
-Work Orders are structured units of work that can be implemented by humans,
-coding agents, or an automation runtime. They do not require a factory,
-dashboard, queue, or agent runner. Those systems can help operate Work Orders
-at scale, but the protocol starts with a simpler promise:
+Work Orders are for teams that want clearer software work in the age of coding
+agents. They turn a vague ticket into a bounded, verifiable implementation
+contract that a human, an AI coding agent, or an automation runtime can execute.
+
+They do not require a factory, dashboard, queue, or agent runner. Those systems
+can help operate Work Orders at scale, but the protocol starts with a simpler
+promise:
 
 > A cold reader should be able to pick up one Work Order, understand the
 > intended change, implement it within bounded scope, prove it works, and leave
@@ -29,6 +31,19 @@ A Work Order is different from a ticket because it is designed to be:
 - **Portable:** usable manually, with a coding assistant, or inside an automated
   factory.
 
+## 5-Minute Quickstart
+
+1. Copy [templates/WO-template.md](templates/WO-template.md) into your repo.
+2. Create `docs/work_orders/WO-001-first-change.md`.
+3. Fill in `Problem`, `What To Build`, `Out Of Scope`, `Acceptance Criteria`,
+   `Validation Plan`, and `Execution`.
+4. Add [AGENT_PROCESS.md](AGENT_PROCESS.md) so humans and agents share the rules.
+5. Implement the WO on a branch.
+6. Run the validation plan.
+7. Close with verification evidence and follow-ons.
+
+For a fuller setup, read [Enabling Work Orders](docs/enabling-work-orders.md).
+
 ## Core Ideas
 
 | Concept | Meaning |
@@ -40,6 +55,18 @@ A Work Order is different from a ticket because it is designed to be:
 | Acceptance Criteria | Objective checks proving the change is done. |
 | Validation Plan | How implementation will be tested and inspected. |
 | Follow-On Capture | New work discovered during implementation is recorded separately. |
+
+## Adoption Levels
+
+| Level | Name | What you add |
+| --- | --- | --- |
+| 1 | Human Work Orders | Template, risk tiers, validation, closeout. |
+| 2 | Agent-Assisted Work Orders | Add `AGENT_PROCESS.md` and thin agent adapters. |
+| 3 | CI-Gated Work Orders | Add checks that enforce tests, security, and process invariants. |
+| 4 | Factory-Operated Work Orders | Add queueing, claiming, dashboards, dispatch, and merge automation. |
+
+Start at Level 1. Do not add automation until the Work Orders themselves are
+clear.
 
 ## Suggested Repo Shape
 
@@ -103,14 +130,16 @@ Orders from a terminal and a pull request.
 
 ## Start Here
 
-1. Read [Creating Work Orders](docs/creating-work-orders.md).
-2. Enable the method in a project with [Enabling Work Orders](docs/enabling-work-orders.md).
-3. Copy [the template](templates/WO-template.md).
-4. Pick a risk tier from [Risk Tiers](docs/risk-tiers.md).
-5. Implement using [Implementing Work Orders](docs/implementing-work-orders.md).
-6. Add tool-specific front doors from [Agent Instruction Adapters](docs/agent-instruction-adapters.md).
-7. Strengthen your template with [Strengthening Work Orders](docs/strengthening-work-orders.md).
-8. Review [What Is Missing From Most WO Processes](docs/process-improvements.md).
+1. [Quickstart](docs/quickstart.md)
+2. [Enabling Work Orders](docs/enabling-work-orders.md)
+3. [Creating Work Orders](docs/creating-work-orders.md)
+4. [Implementing Work Orders](docs/implementing-work-orders.md)
+5. [Risk Tiers](docs/risk-tiers.md)
+6. [Agent Instruction Adapters](docs/agent-instruction-adapters.md)
+7. [Adoption Levels](docs/adoption-levels.md)
+8. [Comparisons](docs/comparisons.md)
+9. [Governance](docs/governance.md)
+10. [Strengthening Work Orders](docs/strengthening-work-orders.md)
 
 ## Relationship To Agentic Factory
 
@@ -119,3 +148,8 @@ agent assignment, dashboards, claim files, queue state, CI review, and merge
 automation.
 
 The Work Order Protocol is the method. A factory is one implementation path.
+
+## Evangelize
+
+The [evangelism guide](docs/evangelism/blog-plan.md) includes blog themes,
+audiences, titles, and a first-post draft for explaining Work Orders publicly.
