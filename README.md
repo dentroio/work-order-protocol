@@ -47,6 +47,7 @@ docs/
   work_orders/
     WO-001-short-title.md
   work-order-framework/
+    enabling-work-orders.md
     creating-work-orders.md
     implementing-work-orders.md
     risk-tiers.md
@@ -102,11 +103,13 @@ Orders from a terminal and a pull request.
 ## Start Here
 
 1. Read [Creating Work Orders](docs/creating-work-orders.md).
-2. Copy [the template](templates/WO-template.md).
-3. Pick a risk tier from [Risk Tiers](docs/risk-tiers.md).
-4. Implement using [Implementing Work Orders](docs/implementing-work-orders.md).
-5. Add tool-specific front doors from [Agent Instruction Adapters](docs/agent-instruction-adapters.md).
-6. Review [What Is Missing From Most WO Processes](docs/process-improvements.md).
+2. Enable the method in a project with [Enabling Work Orders](docs/enabling-work-orders.md).
+3. Copy [the template](templates/WO-template.md).
+4. Pick a risk tier from [Risk Tiers](docs/risk-tiers.md).
+5. Implement using [Implementing Work Orders](docs/implementing-work-orders.md).
+6. Add tool-specific front doors from [Agent Instruction Adapters](docs/agent-instruction-adapters.md).
+7. Strengthen your template with [Strengthening Work Orders](docs/strengthening-work-orders.md).
+8. Review [What Is Missing From Most WO Processes](docs/process-improvements.md).
 
 ## Relationship To Agentic Factory
 
