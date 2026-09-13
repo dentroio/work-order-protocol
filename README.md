@@ -52,6 +52,11 @@ docs/
     risk-tiers.md
 templates/
   WO-template.md
+  agent-instructions/
+    AGENTS.md
+    CLAUDE.md
+    GEMINI.md
+    cursor-agent-process.mdc
 examples/
   ui-bug.md
   api-contract-change.md
@@ -100,7 +105,8 @@ Orders from a terminal and a pull request.
 2. Copy [the template](templates/WO-template.md).
 3. Pick a risk tier from [Risk Tiers](docs/risk-tiers.md).
 4. Implement using [Implementing Work Orders](docs/implementing-work-orders.md).
-5. Review [What Is Missing From Most WO Processes](docs/process-improvements.md).
+5. Add tool-specific front doors from [Agent Instruction Adapters](docs/agent-instruction-adapters.md).
+6. Review [What Is Missing From Most WO Processes](docs/process-improvements.md).
 
 ## Relationship To Agentic Factory
 
@@ -109,4 +115,3 @@ agent assignment, dashboards, claim files, queue state, CI review, and merge
 automation.
 
 The Work Order Framework is the method. A factory is one implementation path.
-

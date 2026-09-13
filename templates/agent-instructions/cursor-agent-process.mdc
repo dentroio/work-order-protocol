@@ -1,0 +1,15 @@
+---
+description: Work Order process - always applied
+alwaysApply: true
+---
+
+# Work Order Process
+
+Read `AGENT_PROCESS.md` before implementing a Work Order.
+
+- Work Orders live in `docs/work_orders/` unless this repo defines another path.
+- Stay inside `Problem`, `What To Build`, `Out Of Scope`, and `Do NOT Change`.
+- Run the Work Order validation plan and project quality gate.
+- Ask for human verification when required.
+- File follow-ons for adjacent work instead of expanding the current change.
+
