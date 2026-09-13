@@ -1,11 +1,12 @@
-# Work Order Framework
+# Work Order Protocol
 
-A portable framework for turning software intent into verified implementation.
+A lightweight protocol for turning software intent into verified implementation
+by humans, coding agents, or automation.
 
 Work Orders are structured units of work that can be implemented by humans,
 coding agents, or an automation runtime. They do not require a factory,
 dashboard, queue, or agent runner. Those systems can help operate Work Orders
-at scale, but the framework starts with a simpler promise:
+at scale, but the protocol starts with a simpler promise:
 
 > A cold reader should be able to pick up one Work Order, understand the
 > intended change, implement it within bounded scope, prove it works, and leave
@@ -46,7 +47,7 @@ A Work Order is different from a ticket because it is designed to be:
 docs/
   work_orders/
     WO-001-short-title.md
-  work-order-framework/
+  work-order-protocol/
     enabling-work-orders.md
     creating-work-orders.md
     implementing-work-orders.md
@@ -67,7 +68,7 @@ AGENT_PROCESS.md
 ```
 
 Use this structure as-is, or adapt it to your existing project management
-system. The framework does not require any specific directory layout as long as
+system. The protocol does not require any specific directory layout as long as
 the Work Orders remain findable, reviewable, and versioned.
 
 ## Work Order Lifecycle
@@ -117,4 +118,4 @@ Agentic Factory is an optional runtime pattern for operating Work Orders with
 agent assignment, dashboards, claim files, queue state, CI review, and merge
 automation.
 
-The Work Order Framework is the method. A factory is one implementation path.
+The Work Order Protocol is the method. A factory is one implementation path.
