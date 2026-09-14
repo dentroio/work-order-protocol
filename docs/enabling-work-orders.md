@@ -13,6 +13,7 @@ Add these files or equivalents:
 ```text
 AGENT_PROCESS.md
 docs/work_orders/
+docs/status.md
 templates/WO-template.md
 ```
 
@@ -41,6 +42,35 @@ docs/project_management/work_orders/
 
 The exact path matters less than consistency. Every contributor and agent should
 know where accepted Work Orders live.
+
+## Step 1.5. Choose A Status Record
+
+Work Orders should have one obvious project-level status record.
+
+This does not have to be a new tool. Use what the project already has:
+
+- Markdown progress file
+- GitHub Issues or Projects
+- Linear, Jira, or another tracker
+- spreadsheet
+- release checklist
+- dashboard
+- queue file
+
+The protocol only requires that contributors can answer:
+
+- what is open
+- what is in progress
+- what is blocked
+- what is under review
+- what is complete
+- what changed recently
+- what the current focus or milestone is
+
+If the status record has summary metadata, such as last updated date, focus,
+release phase, or blockers, require closeout to review it.
+
+See [Status And Progress Tracking](status-and-progress-tracking.md).
 
 ## Step 2. Add The Template
 
@@ -140,7 +170,7 @@ Create WO
   -> open PR
   -> review
   -> merge
-  -> update WO closeout
+  -> update WO closeout and project status
 ```
 
 Branch naming is optional but useful:
@@ -175,6 +205,8 @@ At closeout, record:
 - follow-ons filed
 - residual risks
 - docs updated
+- project status updated
+- summary metadata reviewed, if your status record has it
 
 This is how the process gets stronger over time.
 
@@ -183,15 +215,16 @@ This is how the process gets stronger over time.
 Use this checklist to enable Work Orders in an existing repo:
 
 1. Add a Work Order directory.
-2. Add a WO template.
-3. Add `AGENT_PROCESS.md`.
-4. Define risk tiers.
-5. Define quality gate.
-6. Define human verification policy.
-7. Add agent adapter files if using coding agents.
-8. Create one small example WO.
-9. Implement it manually or with an agent.
-10. Update the process based on what was missing.
+2. Choose a project-level status record.
+3. Add a WO template.
+4. Add `AGENT_PROCESS.md`.
+5. Define risk tiers.
+6. Define quality gate.
+7. Define human verification policy.
+8. Add agent adapter files if using coding agents.
+9. Create one small example WO.
+10. Implement it manually or with an agent.
+11. Update the process based on what was missing.
 
 ## When To Add A Factory Later
 
@@ -209,4 +242,3 @@ A factory helps when you need:
 
 Do not use a factory to compensate for unclear Work Orders. Automation makes a
 strong process faster and a weak process louder.
-

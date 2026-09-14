@@ -12,7 +12,8 @@ uses Work Orders. Adapt commands to the target project.
 5. Preserve anything listed under "Do NOT Change."
 6. Run the validation plan and quality gate.
 7. Ask for human verification when required.
-8. Record verification evidence and follow-ons before closeout.
+8. Update the project status record and review summary metadata.
+9. Record verification evidence and follow-ons before closeout.
 
 ## Implementation Checklist
 
@@ -24,6 +25,7 @@ Read WO
   -> test
   -> manual verification if required
   -> review
+  -> update status record
   -> closeout
 ```
 
@@ -35,4 +37,4 @@ Read WO
 - Do not downgrade risk tier.
 - Do not approve your own high-risk spec.
 - Do not claim completion without verification evidence.
-
+- Do not let planning-only Work Order changes count as implementation completion.

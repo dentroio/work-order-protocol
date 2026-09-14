@@ -64,6 +64,9 @@ claim file, status board, or queue entry.
 The important rule is simple: only one implementer should believe they own the
 same Work Order at the same time.
 
+Claiming should update whichever status record the project uses. That may be an
+issue assignment, board column, Markdown row, queue item, or dashboard state.
+
 ## 6. Implemented
 
 Implementation follows the Work Order. New discoveries are handled carefully:
@@ -110,9 +113,16 @@ The Work Order is closed only when:
 
 - implementation is merged or otherwise delivered
 - verification evidence exists
-- status is updated
+- the Work Order status is updated
+- the project-level status record is updated
+- summary metadata such as last updated date, focus, milestone, or blockers has
+  been reviewed
 - follow-on work is captured
 - any required docs are updated
+
+Closing a planning change is different from closing implementation work. A PR
+or issue that creates a Work Order should not by itself mark that Work Order
+complete unless it also delivered the accepted scope.
 
 ## 10. Follow-Ons Filed
 
@@ -121,4 +131,3 @@ things. The discipline is not to ignore them; it is to avoid hiding them inside
 the current change.
 
 Follow-ons preserve reviewability and keep the original Work Order honest.
-

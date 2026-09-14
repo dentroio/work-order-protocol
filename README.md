@@ -54,6 +54,7 @@ For a fuller setup, read [Enabling Work Orders](docs/enabling-work-orders.md).
 | Risk Tier | The autonomy and approval budget for the change. |
 | Acceptance Criteria | Objective checks proving the change is done. |
 | Validation Plan | How implementation will be tested and inspected. |
+| Status Record | The project-level place where WO state, focus, blockers, and recent change are visible. |
 | Follow-On Capture | New work discovered during implementation is recorded separately. |
 
 ## Adoption Levels
@@ -98,6 +99,21 @@ Use this structure as-is, or adapt it to your existing project management
 system. The protocol does not require any specific directory layout as long as
 the Work Orders remain findable, reviewable, and versioned.
 
+## Project Status
+
+The protocol is independent of any project management system, but it does expect
+status to be real.
+
+Each project should have one obvious place to track open, active, blocked,
+review, and complete Work Orders. That can be a Markdown progress file, GitHub
+Issues, Jira, Linear, a spreadsheet, a dashboard, or a factory queue.
+
+When a Work Order is closed, update both the individual Work Order status and
+the project-level status record. If the project has summary metadata such as
+last updated date, current focus, release phase, or blockers, review those too.
+
+See [Status And Progress Tracking](docs/status-and-progress-tracking.md).
+
 ## Work Order Lifecycle
 
 ```text
@@ -135,11 +151,12 @@ Orders from a terminal and a pull request.
 3. [Creating Work Orders](docs/creating-work-orders.md)
 4. [Implementing Work Orders](docs/implementing-work-orders.md)
 5. [Risk Tiers](docs/risk-tiers.md)
-6. [Agent Instruction Adapters](docs/agent-instruction-adapters.md)
-7. [Adoption Levels](docs/adoption-levels.md)
-8. [Comparisons](docs/comparisons.md)
-9. [Governance](docs/governance.md)
-10. [Strengthening Work Orders](docs/strengthening-work-orders.md)
+6. [Status And Progress Tracking](docs/status-and-progress-tracking.md)
+7. [Agent Instruction Adapters](docs/agent-instruction-adapters.md)
+8. [Adoption Levels](docs/adoption-levels.md)
+9. [Comparisons](docs/comparisons.md)
+10. [Governance](docs/governance.md)
+11. [Strengthening Work Orders](docs/strengthening-work-orders.md)
 
 ## Relationship To Agentic Factory
 
@@ -153,5 +170,6 @@ The Work Order Protocol is the method. A factory is one implementation path.
 
 The [evangelism guide](docs/evangelism/blog-plan.md) includes blog themes,
 audiences, titles, and a first-post draft for explaining Work Orders publicly.
-The polished [blog series](docs/blog/README.md) starts with the protocol,
-continues into a Clarion case study, and then explains the optional factory path.
+The polished [blog series](docs/blog/README.md) starts with the standalone
+protocol, continues into an example case study, and then explains the optional
+factory path.

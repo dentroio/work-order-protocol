@@ -15,6 +15,7 @@ Read process
   -> Ask for required human verification
   -> Run quality gate
   -> Open review
+  -> Update status records
   -> Close and capture follow-ons
 ```
 
@@ -28,6 +29,7 @@ The implementer should confirm:
 - no one else owns the same Work Order
 - the risk tier and verification requirements are understood
 - the expected touched areas make sense
+- the project-level status record is known
 
 ## Scope Rule
 
@@ -57,6 +59,25 @@ Run verification that matches the real delivery environment. Examples:
 The Work Order should name the expected verification. If it does not, the
 implementer should add evidence in the PR or closeout notes.
 
+## Status Update
+
+Before a Work Order is considered done, update the project's status record.
+
+This can be a progress document, issue tracker, board, spreadsheet, dashboard,
+or queue. The protocol does not require one implementation. It does require the
+project record to match reality.
+
+Update or review:
+
+- the Work Order status
+- the central progress or project-management record
+- summary metadata such as last updated date, focus, milestone, or blockers
+- links to the merged PR, release note, or verification evidence
+
+Do not mark planning-only changes as implementation completion. Creating,
+splitting, or editing a Work Order means the Work Order exists; it does not mean
+the underlying work has shipped.
+
 ## Human Checkpoint
 
 Use a human checkpoint when:
@@ -81,6 +102,6 @@ A good closeout records:
 - what was intentionally left out
 - follow-on WOs or issues
 - unresolved risks
+- status and project-management records updated
 
 This is where implementation feeds the next cycle of planning.
-

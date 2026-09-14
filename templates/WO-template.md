@@ -38,7 +38,7 @@ Describe the concrete implementation:
 
 - Expected:
 - Tests:
-- Docs:
+- Docs/status:
 
 ## Out Of Scope
 
@@ -71,6 +71,7 @@ Describe the concrete implementation:
 - **Depends on:** none | WO-NNN
 - **Human verification required:** Yes / No
 - **Reviewer / approver:** person, team, or role
+- **Project status record:** file, issue, board, dashboard, or other source of truth
 
 ## Closeout
 
@@ -78,4 +79,5 @@ Describe the concrete implementation:
 - Follow-ons filed:
 - Residual risks:
 - Docs/status updated:
-
+- Summary metadata reviewed:
+- Planning-only change? Yes / No
