@@ -71,8 +71,16 @@ Update or review:
 
 - the Work Order status
 - the central progress or project-management record
+- affected capability, release, or roadmap records
+- automation state such as queues or claim records, if used
 - summary metadata such as last updated date, focus, milestone, or blockers
 - links to the merged PR, release note, or verification evidence
+
+If the project has multiple status surfaces, use the Work Order's declared
+surfaces as the closeout checklist. A machine queue can say what automation is
+doing; a capability registry says what the product can do; a progress tracker
+says where the project is. Those are related, but they are not automatically the
+same artifact.
 
 Do not mark planning-only changes as implementation completion. Creating,
 splitting, or editing a Work Order means the Work Order exists; it does not mean

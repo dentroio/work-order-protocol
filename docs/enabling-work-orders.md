@@ -72,6 +72,11 @@ release phase, or blockers, require closeout to review it.
 
 See [Status And Progress Tracking](status-and-progress-tracking.md).
 
+If the project already has more than one status surface, name the role of each
+one. For example, an issue tracker may be the Work Order source, a progress file
+may be the human sprint view, a capability registry may be the product-area
+view, and a queue file may be automation state.
+
 ## Step 2. Add The Template
 
 Copy:
@@ -239,6 +244,12 @@ A factory helps when you need:
 - PR watching
 - merge automation
 - cross-agent coordination
+
+When a factory is added to an existing project, classify its queue and claim
+records as automation state unless the team explicitly promotes them to a
+human-facing source of truth. The factory should operate Work Orders; it should
+not accidentally replace project management, capability tracking, or release
+status.
 
 Do not use a factory to compensate for unclear Work Orders. Automation makes a
 strong process faster and a weak process louder.

@@ -42,6 +42,70 @@ For small projects, this can be one Markdown file.
 For larger projects, it may be a dashboard backed by issues, PRs, or machine
 readable queue files.
 
+## Multiple Status Surfaces
+
+As a project grows, one status record often becomes several surfaces.
+
+That is normal. A team may have:
+
+- a human progress tracker organized by sprint or milestone
+- a capability registry organized by product area
+- an issue tracker organized by assignment and review
+- a machine queue organized by priority and dispatch state
+- claim records used by agents or automation
+- release notes organized by customer-visible outcome
+
+The protocol can support this, but only if each surface has a declared role.
+
+For every status surface, write down:
+
+- who reads it
+- who or what updates it
+- whether it is source, projection, or automation state
+- when it must be updated
+- what other surfaces it must agree with
+- what fields are safe for automation to edit
+- what fields require human judgment
+
+Without this map, status drift is inevitable. One system says a Work Order is
+done, another still says it is open, and a capability registry may not mention
+the delivered capability at all.
+
+## Source, Projection, And Automation State
+
+Do not make every status surface equally authoritative.
+
+Classify each surface:
+
+| Surface Type | Purpose | Example |
+| --- | --- | --- |
+| Source | The canonical record for the Work Order's scope, acceptance, and closeout. | Work Order file, issue, or ticket |
+| Project status | Human-facing view of what is open, active, blocked, and recently completed. | Progress document, project board, roadmap tracker |
+| Capability status | Human-facing view of shipped capability by product area. | Capability registry, release readiness table |
+| Automation state | Machine-facing view used for dispatch, ownership, or workflow. | Queue file, claim file, runner database |
+| Derived projection | Generated or periodically reconciled view. | Dashboard, report, rollup |
+
+Automation state can help operate the work, but it should not silently become
+the product or project-management story unless the team explicitly chooses that.
+
+## Reconciliation Rule
+
+When a Work Order closes, update every status surface named in the Work Order or
+process.
+
+At minimum, reconcile:
+
+- the Work Order source record
+- the project-level status record
+- any capability or release registry affected by the change
+- any automation state used to dispatch or claim the work
+
+If a surface is intentionally not updated, record why in closeout.
+
+This is especially important when automation is added after the project already
+has human-facing project-management docs. The new queue or runner state should
+serve the protocol; it should not replace existing PM artifacts by accident.
+
 ## Row-Level Status
 
 Each Work Order should have a status that is easy to inspect.
@@ -142,4 +206,3 @@ Use this checklist at closeout:
 4. Record verification evidence.
 5. Record follow-ons and residual risks.
 6. Confirm the change was implementation work, not only planning or filing work.
-

@@ -72,6 +72,7 @@ Describe the concrete implementation:
 - **Human verification required:** Yes / No
 - **Reviewer / approver:** person, team, or role
 - **Project status record:** file, issue, board, dashboard, or other source of truth
+- **Other status surfaces to reconcile:** capability registry, release tracker, automation queue, claim file, none
 
 ## Closeout
 
@@ -79,5 +80,6 @@ Describe the concrete implementation:
 - Follow-ons filed:
 - Residual risks:
 - Docs/status updated:
+- Status surfaces reconciled:
 - Summary metadata reviewed:
 - Planning-only change? Yes / No
