@@ -35,6 +35,15 @@ For your first Work Order, fill in:
 
 Keep the first one small. A README fix, UI copy change, or focused bug is ideal.
 
+You do not have to complete the template alone. Ask a coding agent to inspect
+the repository and draft the Work Order from your description of the problem.
+You provide or confirm the intent, scope, risk, and acceptance standard; the
+agent can gather evidence and structure the draft.
+
+Use the prompt and review flow in [Agent-Assisted Work Order
+Authoring](agent-assisted-authoring.md). Drafting is not authorization to
+implement: keep the Work Order in `Draft` until a human accepts it.
+
 ## 4. Add A Shared Process File
 
 Copy or adapt:

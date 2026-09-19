@@ -36,13 +36,17 @@ A Work Order is different from a ticket because it is designed to be:
 1. Copy [templates/WO-template.md](templates/WO-template.md) into your repo.
 2. Create `docs/work_orders/WO-001-first-change.md`.
 3. Fill in `Problem`, `What To Build`, `Out Of Scope`, `Acceptance Criteria`,
-   `Validation Plan`, and `Execution`.
+   `Validation Plan`, and `Execution`, or ask an agent to inspect the repo and
+   draft them with you.
 4. Add [AGENT_PROCESS.md](AGENT_PROCESS.md) so humans and agents share the rules.
 5. Implement the WO on a branch.
 6. Run the validation plan.
 7. Close with verification evidence and follow-ons.
 
 For a fuller setup, read [Enabling Work Orders](docs/enabling-work-orders.md).
+You can also use the reusable prompt in [Agent-Assisted Work Order
+Authoring](docs/agent-assisted-authoring.md) instead of completing a blank
+template by hand.
 
 ## Core Ideas
 
@@ -149,14 +153,15 @@ Orders from a terminal and a pull request.
 1. [Quickstart](docs/quickstart.md)
 2. [Enabling Work Orders](docs/enabling-work-orders.md)
 3. [Creating Work Orders](docs/creating-work-orders.md)
-4. [Implementing Work Orders](docs/implementing-work-orders.md)
-5. [Risk Tiers](docs/risk-tiers.md)
-6. [Status And Progress Tracking](docs/status-and-progress-tracking.md)
-7. [Agent Instruction Adapters](docs/agent-instruction-adapters.md)
-8. [Adoption Levels](docs/adoption-levels.md)
-9. [Comparisons](docs/comparisons.md)
-10. [Governance](docs/governance.md)
-11. [Strengthening Work Orders](docs/strengthening-work-orders.md)
+4. [Agent-Assisted Work Order Authoring](docs/agent-assisted-authoring.md)
+5. [Implementing Work Orders](docs/implementing-work-orders.md)
+6. [Risk Tiers](docs/risk-tiers.md)
+7. [Status And Progress Tracking](docs/status-and-progress-tracking.md)
+8. [Agent Instruction Adapters](docs/agent-instruction-adapters.md)
+9. [Adoption Levels](docs/adoption-levels.md)
+10. [Comparisons](docs/comparisons.md)
+11. [Governance](docs/governance.md)
+12. [Strengthening Work Orders](docs/strengthening-work-orders.md)
 
 ## Relationship To Agentic Factory
 
@@ -165,11 +170,3 @@ agent assignment, dashboards, claim files, queue state, CI review, and merge
 automation.
 
 The Work Order Protocol is the method. A factory is one implementation path.
-
-## Evangelize
-
-The [evangelism guide](docs/evangelism/blog-plan.md) includes blog themes,
-audiences, titles, and a first-post draft for explaining Work Orders publicly.
-The polished [blog series](docs/blog/README.md) starts with the standalone
-protocol, continues into an example case study, and then explains the optional
-factory path.

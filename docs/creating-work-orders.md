@@ -19,11 +19,27 @@ Work Orders can come from:
 
 The source does not matter as much as the readiness gate.
 
+## You Can Ask An Agent To Draft It
+
+Creating a Work Order does not have to mean filling in a blank form alone. A
+repo-aware coding agent can investigate the current behavior, collect evidence,
+find likely tests and change surfaces, and structure a first draft from an
+ordinary-language description.
+
+The agent should not invent missing product decisions or accept its own risky
+draft. The human owner confirms intent, boundaries, risk, and what counts as
+done. Keep drafting separate from implementation and leave the status as
+`Draft` until the readiness review is complete.
+
+See [Agent-Assisted Work Order Authoring](agent-assisted-authoring.md) for the
+recommended flow, division of responsibility, and a reusable prompt.
+
 ## Creation Flow
 
 ```text
 Observe
   -> Capture evidence
+  -> Investigate manually or with an agent
   -> Decide whether this is one unit of work
   -> Draft the Work Order
   -> Assign risk and owner
@@ -96,4 +112,3 @@ A good split creates parallelism and cleaner review.
 | "Make it better" acceptance | Use commands, URLs, screenshots, or observed outcomes. |
 | No out-of-scope section | Name tempting extras explicitly. |
 | Agent writes and approves its own risky spec | Human owns risk and acceptance. |
-
