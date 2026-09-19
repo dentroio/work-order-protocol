@@ -3,6 +3,23 @@
 This file is a generic front door for coding agents working in a repository that
 uses Work Orders. Adapt commands to the target project.
 
+## When Asked To Draft A Work Order
+
+Drafting is not implementation authorization.
+
+1. Read the project process, template, status record, and relevant existing WOs.
+2. Inspect enough code, tests, and documentation to ground the draft in evidence.
+3. Separate verified facts from assumptions and recommendations.
+4. Ask for or mark open decisions that materially affect behavior, scope, risk,
+   or acceptance.
+5. Recommend a risk tier, but do not silently reduce or finalize risk.
+6. Leave the Work Order in `Draft` until a human accepts it.
+7. Do not edit product code, create an implementation branch, or claim the WO
+   unless the user separately authorizes implementation.
+
+See `docs/agent-assisted-authoring.md` for the full authoring flow and reusable
+prompt.
+
 ## Rules
 
 1. Read the assigned Work Order before editing files.
