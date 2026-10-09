@@ -39,14 +39,29 @@ A Work Order is different from a ticket because it is designed to be:
    `Validation Plan`, and `Execution`, or ask an agent to inspect the repo and
    draft them with you.
 4. Add [AGENT_PROCESS.md](AGENT_PROCESS.md) so humans and agents share the rules.
-5. Implement the WO on a branch.
-6. Run the validation plan.
-7. Close with verification evidence and follow-ons.
+5. Choose and name the project status record in the WO. List any other status
+   surfaces that closeout must reconcile.
+6. Have the human owner accept the scope, [risk tier](docs/risk-tiers.md),
+   validation plan, and required approvals. Record that decision and mark the
+   WO `Ready` (or your project's equivalent accepted state).
+7. Confirm dependencies are complete and no one else owns the work. Claim it,
+   update status, and implement only the accepted scope on a branch.
+8. Run the validation plan and quality gate. Obtain required human verification
+   and [review/merge approval](docs/governance.md) before delivery.
+9. Close with evidence, review results, residual risks, and follow-ons. Update
+   the WO and every declared status surface; review summary metadata too.
+
+If a material scope, risk, or validation decision is missing, stop and resolve
+it before implementation. A filled template is not implementation authorization.
 
 For a fuller setup, read [Enabling Work Orders](docs/enabling-work-orders.md).
 You can also use the reusable prompt in [Agent-Assisted Work Order
 Authoring](docs/agent-assisted-authoring.md) instead of completing a blank
 template by hand.
+
+See the [example index](examples/README.md) and the
+[complete closeout walkthrough](examples/complete-closeout.md) for a worked
+path from a thin ticket to a verified change and an updated project record.
 
 ## Core Ideas
 

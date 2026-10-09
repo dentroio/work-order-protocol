@@ -23,7 +23,8 @@ Read process
 
 The implementer should confirm:
 
-- the Work Order status is ready
+- the Work Order has passed readiness review and the human owner's acceptance
+  is recorded (`Ready` includes acceptance in the default status scheme)
 - dependencies are complete
 - the local branch starts from the intended base
 - no one else owns the same Work Order
@@ -56,8 +57,15 @@ Run verification that matches the real delivery environment. Examples:
 - staging deployment check
 - migration dry run
 
-The Work Order should name the expected verification. If it does not, the
-implementer should add evidence in the PR or closeout notes.
+The Work Order must name the expected verification before implementation. If
+material validation decisions are missing, stop and resolve them with the owner
+before coding. Do not choose the success standard after the change is built.
+Additional evidence can supplement the accepted plan; material changes to the
+plan require the owner's decision and an updated Work Order.
+
+Record checks that could not run and the remaining risk. Do not mark the work
+complete until required verification is satisfied, or the responsible human
+explicitly accepts a documented exception under the project's policy.
 
 ## Status Update
 
