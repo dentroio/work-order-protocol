@@ -55,6 +55,12 @@ sit in a backlog, milestone, issue tracker, local folder, or factory queue.
 
 Acceptance does not mean someone has started. It means the work is shaped.
 
+Record the human owner's acceptance. In the default lightweight status scheme,
+`Ready` includes that acceptance; a project may instead use `Accepted` or keep
+separate readiness and approval states. Define the mapping explicitly in the
+[status record](status-and-progress-tracking.md#row-level-status). Neither a
+populated template nor an agent's readiness assessment grants authorization.
+
 ## 5. Claimed / Assigned
 
 The implementer takes ownership for this unit of work. In a lightweight process,

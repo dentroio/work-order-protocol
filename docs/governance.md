@@ -43,6 +43,12 @@ A Work Order should not move to `Ready` until:
 - risk tier is accepted
 - open decisions are either resolved or moved to research
 
+In the default flow, the human owner's acceptance of scope, risk, and validation
+is recorded before the WO becomes Ready. Projects may use a separate Accepted
+state, but must document it and require both gates before work starts. Research
+also needs acceptance of the investigation scope; accepting research is not
+accepting the eventual product implementation.
+
 ## Closure
 
 Only close a Work Order when:

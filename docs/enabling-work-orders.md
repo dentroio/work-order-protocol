@@ -168,6 +168,8 @@ For a project without a factory, a normal flow is:
 ```text
 Create WO
   -> review readiness
+  -> record human acceptance of scope, risk, and validation
+  -> confirm dependencies and exclusive ownership
   -> create branch
   -> implement
   -> run quality gate
@@ -177,6 +179,11 @@ Create WO
   -> merge
   -> update WO closeout and project status
 ```
+
+In the default status scheme, Ready includes human acceptance. If your project
+keeps Ready and Accepted separate, document the mapping and require both gates.
+Research-only assignments still require approval to investigate; they do not
+authorize product changes. See [status definitions](status-and-progress-tracking.md#row-level-status).
 
 Branch naming is optional but useful:
 

@@ -29,6 +29,7 @@ For your first Work Order, fill in:
 - Problem
 - What To Build / Fix
 - Out Of Scope
+- Do NOT Change
 - Acceptance Criteria
 - Validation Plan
 - Execution
@@ -52,7 +53,10 @@ Copy or adapt:
 AGENT_PROCESS.md
 ```
 
-This is the one file every human and coding agent should follow.
+This is the shared project process. If using a coding agent, configure its
+[tool-specific entry point](agent-instruction-adapters.md) to read it;
+AGENT_PROCESS.md is not a universal automatically loaded filename. Project
+instructions do not override higher-priority tool policies or permissions.
 
 ## 5. Choose A Status Record
 
@@ -62,7 +66,32 @@ spreadsheet, dashboard, or queue.
 The only requirement is that open, active, blocked, review, and complete Work
 Orders have one visible source of truth.
 
-## 6. Implement The Work Order
+Write the chosen location into the WO's `Project status record` field. Name
+any capability, release, or automation records that must also change at closeout,
+or explicitly write `none`. See [Status And Progress
+Tracking](status-and-progress-tracking.md).
+
+## 6. Review Readiness And Accept The Work
+
+Before implementation, the human owner confirms:
+
+- the problem and intended outcome are clear
+- scope, exclusions, and protected behavior are explicit
+- the [risk tier](risk-tiers.md), validation plan, and quality gate are defined
+- required human verification and the reviewer/approver are named
+- material product decisions are resolved, or the scope is research-only
+- dependencies and status records are named
+
+Record the acceptance decision and mark the WO `Ready`, or the equivalent
+accepted state in your project. In this guide, `Ready` includes human acceptance;
+if your project separates readiness from acceptance, require both before work
+starts. See [Governance](governance.md).
+
+Do not begin just because an agent filled the template. Resolve missing material
+validation decisions before coding; use a research WO when the outcome is an
+investigation rather than a product change.
+
+## 7. Implement The Work Order
 
 Use a branch:
 
@@ -72,21 +101,34 @@ wo/001-first-change
 
 Then:
 
-1. Read the WO.
-2. Make only the scoped change.
-3. Run the validation plan.
-4. Capture follow-ons instead of expanding scope.
-5. Update the status record.
-6. Open a pull request or merge through your normal process.
+1. Re-read the accepted WO and process; confirm the files and assumptions are
+   still current, dependencies are complete, and no one else owns the work.
+2. Claim or assign the WO, create the branch, and update the status record to
+   `In Progress`.
+3. Make only the scoped change. Capture adjacent work as follow-ons; ask the
+   owner before changing scope or required validation.
+4. Run the accepted validation plan and quality gate. Record results and any
+   checks that could not run. Do not treat skipped checks as passes.
+5. Obtain required human verification, open review, and record the review and
+   merge/release approvals required by the risk tier.
+6. Deliver through the project's normal process. Keep the WO open if required
+   delivery or verification is still pending.
 
-## 7. Close It
+## 8. Close It
 
 Before marking the WO complete, fill in:
 
 - verification evidence
+- review and approval results
 - follow-ons filed
 - residual risks
 - docs/status updated
+- other declared status surfaces reconciled, or a recorded reason for deferral
 - summary metadata reviewed, if your status record has it
 
 That closeout is what makes the next Work Order better.
+
+Read the [complete closeout walkthrough](../examples/complete-closeout.md) to
+see the assignment, illustrative evidence, and before/after progress record
+together. The [example index](../examples/README.md) also includes UI, API,
+docs-only, and research assignments.

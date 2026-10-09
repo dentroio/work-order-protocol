@@ -25,12 +25,16 @@ Minimum gate:
 Not every idea should be implemented. Use explicit states:
 
 - `draft`: still being shaped
-- `research`: investigate and recommend, no product change
-- `ready`: implementable
+- `research`: investigate and recommend after recorded human acceptance, no product change
+- `ready`: readiness reviewed and human acceptance recorded; implementable once dependencies and ownership permit
 - `blocked`: cannot proceed without external decision
-- `accepted`: ready and prioritized
+- `accepted`: optional alias for Ready, or a separately defined human approval state
 
 This prevents half-designed ideas from becoming code.
+
+Use the [status guide](status-and-progress-tracking.md#row-level-status) as the
+shared definition. If Ready and Accepted are separate in your project, document
+the distinction and require both gates before starting work.
 
 ## 3. Decision Context
 

@@ -23,7 +23,7 @@ prompt.
 ## Rules
 
 1. Read the assigned Work Order before editing files.
-2. Confirm dependencies and risk tier.
+2. Confirm recorded human acceptance, dependencies, ownership, and risk tier.
 3. Stay inside the Work Order scope.
 4. Do not expand adjacent work; file follow-ons.
 5. Preserve anything listed under "Do NOT Change."
@@ -36,6 +36,7 @@ prompt.
 
 ```text
 Read WO
+  -> confirm readiness and recorded human acceptance
   -> inspect current state
   -> claim or create branch
   -> implement
@@ -54,4 +55,5 @@ Read WO
 - Do not downgrade risk tier.
 - Do not approve your own high-risk spec.
 - Do not claim completion without verification evidence.
+- Do not begin implementation with unresolved material validation decisions.
 - Do not let planning-only Work Order changes count as implementation completion.

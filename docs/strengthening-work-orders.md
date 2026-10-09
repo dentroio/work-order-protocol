@@ -33,12 +33,16 @@ Use explicit states so drafts do not look ready:
 | State | Meaning |
 | --- | --- |
 | Draft | Idea is being shaped. |
-| Research | Investigate only; do not ship runtime change. |
+| Research | Investigate only after recorded human acceptance; do not ship runtime change. |
 | Ready | Cold-startable and accepted for implementation. |
 | In Progress | Claimed by an implementer. |
 | Review | Implementation is ready for review or verification. |
 | Complete | Delivered and closed out. |
 | Blocked | Cannot proceed without a decision or dependency. |
+
+These labels follow the [status guide](status-and-progress-tracking.md#row-level-status).
+The default Ready state includes human acceptance; projects with a separate
+Accepted state must document the mapping and require both gates.
 
 ## Add A Readiness Review
 

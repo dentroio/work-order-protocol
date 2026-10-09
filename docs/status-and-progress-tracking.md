@@ -115,15 +115,26 @@ Recommended states:
 | State | Meaning |
 | --- | --- |
 | Draft | The problem or scope is still being shaped. |
-| Ready | The Work Order passed readiness review and can be implemented. |
+| Ready | Readiness passed and the human owner's acceptance is recorded; the accepted scope can start when dependencies and ownership permit. |
+| Accepted | Optional local alias for Ready, or a separate approval state when the project explicitly defines that distinction. |
+| Research | Investigation-only scope; it still needs recorded human acceptance before investigation starts and never authorizes product implementation. |
 | In Progress | Someone has claimed or started the work. |
 | Review | The implementation is ready for review or verification. |
-| Complete | The work is merged or accepted, verified, and closed out. |
+| Complete | The accepted scope is delivered, verified, reviewed according to risk, and closed out. |
 | Blocked | Progress requires a decision, dependency, access, or external event. |
 | Deferred | The work is intentionally postponed or replaced. |
 
 Use different labels if your project already has them, but keep the semantics
 clear enough that a cold reader can tell what can be picked up next.
+
+In the default lightweight flow, use `Draft -> Ready -> In Progress -> Review
+-> Complete`; `Ready` includes human acceptance. The lifecycle guide's
+"Accepted" milestone is that decision, not a mandatory extra queue column.
+If a project uses separate Ready and Accepted states, document which state
+authorizes work and require both readiness and acceptance before starting.
+Research describes an investigation-only assignment, not a shortcut around
+approval. Its unresolved product questions are the research output, not
+permission to ship an unaccepted implementation.
 
 ## Summary Metadata
 
