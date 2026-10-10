@@ -20,3 +20,11 @@ Core references:
 - [Comparisons](comparisons.md)
 - [Strengthening Work Orders](strengthening-work-orders.md)
 - [Process Improvements](process-improvements.md)
+
+Reusable setup files:
+
+- [Work Order Template](../templates/WO-template.md)
+- [Progress Record Template](../templates/PROGRESS-template.md)
+- [Status Surface Map Template](../templates/status-surfaces-template.md)
+- [Contribution Guidance](../CONTRIBUTING.md)
+- [Support](../SUPPORT.md)

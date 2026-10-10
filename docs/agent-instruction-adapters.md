@@ -49,11 +49,47 @@ Do not copy the full process into every adapter. Duplication creates drift.
 | `CLAUDE.md` | Claude Code | Claude-specific entry point. |
 | `.cursor/rules/agent-process.mdc` | Cursor | Always-applied Cursor rule. |
 | `GEMINI.md` | Gemini CLI / Google-oriented agent workflows | Gemini-specific entry point when supported by the workflow. |
-| `AGENT_PROCESS.md` | All tools | Canonical shared process. |
+| `AGENT_PROCESS.md` | Humans and explicitly configured tools | Canonical shared process; not a universal auto-loaded filename. |
 
 Different tools may evolve their filenames. The rule is more important than the
 exact list: every agent gets a small local adapter pointing at the same canonical
 process.
+
+## Verify Activation Before Implementation
+
+Files under `templates/agent-instructions/` are examples, not installed adapters.
+Copy only the adapters needed into the target project's actual entry-point
+locations, merge with existing instructions, and adjust project paths. Do not
+overwrite existing guidance blindly.
+
+Use the checks below in the tool and version you actually run. A file being
+present is not proof that its contents reached the agent.
+
+| Tool | Install | Activation check |
+| --- | --- | --- |
+| Codex | Project-root `AGENTS.md` | Start a fresh run in the intended working directory and ask which instruction files apply. Check global, nested, and `AGENTS.override.md` guidance if the result differs from expectations. See [official discovery and verification guidance](https://learn.chatgpt.com/docs/agent-configuration/agents-md). |
+| Claude Code | Project-root `CLAUDE.md` | Use `/memory` to inspect loaded instruction files. Confirm the intended project file appears and ask the agent to read the shared process before work. See [official memory guidance](https://code.claude.com/docs/en/memory). |
+| Cursor | `.cursor/rules/agent-process.mdc` with `alwaysApply: true` | Inspect the rule and its status in Customize > Rules. Confirm the rule is active for the intended project. A referenced file is not automatically inlined; require the agent to read the process. See [official rules guidance](https://cursor.com/docs/rules). |
+| Gemini CLI | Project-root `GEMINI.md` | Use `/memory show` to inspect loaded context and `/memory reload` after changes. Check configured context filenames if the file is absent. See [official context guidance](https://geminicli.com/docs/cli/gemini-md/). |
+
+Then run this non-editing check in the intended project:
+
+```text
+Do not edit files. Read AGENT_PROCESS.md and the assigned Work Order.
+Report the process and Work Order paths, recorded human acceptance, risk tier,
+dependencies, ownership, validation plan, required approvals, and status records.
+Identify any missing information or conflicting instructions before proposing work.
+```
+
+Compare the answer with the files; an agent's summary alone is not proof of
+automatic loading or future compliance. Record the tool/version, working
+directory, installed adapter path, inspection result, and unresolved conflicts
+in the project's setup notes. Repeat after changing adapters, tools, or workspace
+layout. These are setup checks, not permission to implement the assigned WO.
+
+The shared process must be explicitly read, even when an adapter loads correctly.
+Project instructions never override higher-priority policies or permissions.
+If guidance conflicts, stop and resolve it with the owner before implementation.
 
 ## Adapter Responsibilities
 

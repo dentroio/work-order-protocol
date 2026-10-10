@@ -66,6 +66,10 @@ spreadsheet, dashboard, or queue.
 The only requirement is that open, active, blocked, review, and complete Work
 Orders have one visible source of truth.
 
+For a Markdown record, copy the [progress template](../templates/PROGRESS-template.md)
+to `docs/status.md`. If several records must agree, adapt the
+[status surface map](../templates/status-surfaces-template.md) too.
+
 Write the chosen location into the WO's `Project status record` field. Name
 any capability, release, or automation records that must also change at closeout,
 or explicitly write `none`. See [Status And Progress
