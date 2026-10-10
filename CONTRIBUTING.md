@@ -47,9 +47,11 @@ Maintainer review is required before merging; a submitted PR is not approval.
 Use the PR and commit history to trace changes. Do not promise release dates,
 compatibility guarantees, or a support SLA on behalf of the maintainer.
 
-No LICENSE file is currently included. The licensing decision remains with the
-repository owner; this guide does not grant additional usage or contribution
-rights. Resolve licensing questions with the maintainer before contributing
-material whose permissions are uncertain.
+The public repository is licensed under the [MIT License](LICENSE). Submit only
+material you have the right to contribute under that license, and retain required
+third-party notices. Resolve uncertain permissions with the maintainer before
+submitting. The license does not cover the separate book, private manuscript,
+or externally linked material; do not copy those into a contribution without
+separate permission.
 
 For help and safe reporting guidance, see [Support](SUPPORT.md).

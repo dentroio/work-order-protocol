@@ -191,5 +191,11 @@ The Work Order Protocol is the method. A factory is one implementation path.
 ## Contributing And Support
 
 See [Contributing](CONTRIBUTING.md) for focused changes and review checks, and
-[Support](SUPPORT.md) for questions and safe reporting. The repository owner's
-licensing decision is still pending; no LICENSE file is currently included.
+[Support](SUPPORT.md) for questions and safe reporting.
+
+## License
+
+The contents of this public repository are licensed under the [MIT License](LICENSE).
+Retain the copyright and permission notice when copying or adapting substantial
+portions. This license does not cover the separate Work Order Protocol book,
+private manuscript, or externally linked material.
