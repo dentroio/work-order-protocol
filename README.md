@@ -132,6 +132,8 @@ the project-level status record. If the project has summary metadata such as
 last updated date, current focus, release phase, or blockers, review those too.
 
 See [Status And Progress Tracking](docs/status-and-progress-tracking.md).
+For a new Markdown setup, use the [progress record template](templates/PROGRESS-template.md)
+and, when needed, the [status surface map](templates/status-surfaces-template.md).
 
 ## Work Order Lifecycle
 
@@ -185,3 +187,9 @@ agent assignment, dashboards, claim files, queue state, CI review, and merge
 automation.
 
 The Work Order Protocol is the method. A factory is one implementation path.
+
+## Contributing And Support
+
+See [Contributing](CONTRIBUTING.md) for focused changes and review checks, and
+[Support](SUPPORT.md) for questions and safe reporting. The repository owner's
+licensing decision is still pending; no LICENSE file is currently included.

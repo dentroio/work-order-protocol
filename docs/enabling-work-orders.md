@@ -72,6 +72,10 @@ release phase, or blockers, require closeout to review it.
 
 See [Status And Progress Tracking](status-and-progress-tracking.md).
 
+Use the [progress template](../templates/PROGRESS-template.md) for a new Markdown
+record and the [status surface map](../templates/status-surfaces-template.md)
+when multiple records need reconciliation. Existing trackers can keep their format.
+
 If the project already has more than one status surface, name the role of each
 one. For example, an issue tracker may be the Work Order source, a progress file
 may be the human sprint view, a capability registry may be the product-area
@@ -160,6 +164,9 @@ If coding agents will work in the repo, add thin adapter files:
 
 Each should point to `AGENT_PROCESS.md`. Do not duplicate the full process into
 each adapter.
+
+Complete the [activation checks](agent-instruction-adapters.md#verify-activation-before-implementation)
+in each tool you use before assigning implementation work.
 
 ## Step 7. Use A Lightweight Manual Flow
 

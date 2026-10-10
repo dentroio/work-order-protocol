@@ -9,11 +9,12 @@ criteria, risk tier, validation, and closeout.
 Default workflow:
 
 1. Read the Work Order and `AGENT_PROCESS.md`.
-2. Confirm dependencies and current state.
+2. Confirm recorded human acceptance, dependencies, exclusive ownership, and current state.
 3. Implement only the scoped change.
 4. Run the validation plan and quality gate.
 5. Ask for human verification when required.
 6. Record follow-ons instead of expanding scope.
+7. Record evidence and required review results; reconcile declared status records.
 
 Never skip required verification, downgrade risk tier, hardcode secrets, or mix
 unrelated cleanup into the Work Order.

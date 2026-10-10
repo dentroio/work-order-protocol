@@ -39,6 +39,12 @@ Every project using Work Orders should have one obvious place to answer:
 
 For small projects, this can be one Markdown file.
 
+Start with the [progress record template](../templates/PROGRESS-template.md)
+if the project does not already have a trusted record. For multiple surfaces,
+use the [status surface map](../templates/status-surfaces-template.md) to define
+authority, ownership, update triggers, and reconciliation. Replace placeholders
+with actual decisions; the templates do not authorize or complete work.
+
 For larger projects, it may be a dashboard backed by issues, PRs, or machine
 readable queue files.
 
